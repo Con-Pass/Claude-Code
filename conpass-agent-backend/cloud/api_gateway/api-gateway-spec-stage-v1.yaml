@@ -1,0 +1,84 @@
+swagger: '2.0'
+info:
+  title: CF-Delta API Stage
+  description: API Gateway for CF-Delta Cloud Function (Record Sync Handler)
+  version: 1.0.0
+host: record-sync-api-stage-v1-19n5thdp2e3wn.apigateway.conpass-agent.cloud.goog
+schemes:
+  - https
+paths:
+  /v1/sync:
+    post:
+      summary: Trigger contract synchronization
+      description: |
+        Processes contract delta events (created/updated) from ConPass backend.
+        Fetches latest contract data and publishes to Pub/Sub for processing.
+      operationId: triggerSync
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Contract delta event payload
+          required: true
+          schema:
+            type: object
+            required:
+              - contract_id
+              - event_type
+            properties:
+              contract_id:
+                type: integer
+                description: ID of the contract that was created or updated
+              event_type:
+                type: string
+                enum:
+                  - created
+                  - updated
+                description: Type of event that triggered this webhook
+      x-google-backend:
+        address: https://records-sync-handler-stage-356799190483.asia-northeast1.run.app
+        path_translation: APPEND_PATH_TO_ADDRESS
+      security:
+        - api_key: []
+      responses:
+        '200':
+          description: Success - Contract delta event processed and published to Pub/Sub
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              contract_id:
+                type: integer
+              event_type:
+                type: string
+        '400':
+          description: Bad Request - Invalid payload or missing required fields
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        '401':
+          description: Unauthorized - Invalid or missing API key
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        '500':
+          description: Internal Server Error - Processing failed
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: x-api-key
+    in: header
+    description: API key for authenticating requests. Obtain from Google Cloud Console.

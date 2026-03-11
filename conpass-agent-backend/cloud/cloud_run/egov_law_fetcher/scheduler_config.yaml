@@ -1,0 +1,32 @@
+# Cloud Scheduler 定期クローリング設定
+#
+# Cloud Scheduler で毎日AM6時（JST）にe-Gov法令フェッチを実行する。
+# 法令改正検知 → Pub/Sub発行 → Embedding更新のパイプラインをトリガーする。
+#
+# デプロイコマンド例:
+#   gcloud scheduler jobs create http egov-law-fetch-daily \
+#     --schedule="0 6 * * *" \
+#     --time-zone="Asia/Tokyo" \
+#     --uri="https://<CLOUD_RUN_URL>/" \
+#     --http-method=POST \
+#     --oidc-service-account-email=<SA_EMAIL> \
+#     --location=asia-northeast1
+
+name: egov-law-fetch-daily
+description: "e-Gov法令APIから法令テキストを日次取得し、改正を検知する"
+
+schedule: "0 6 * * *"  # 毎日AM6:00 JST
+time_zone: "Asia/Tokyo"
+
+retry_config:
+  retry_count: 3
+  min_backoff_duration: "30s"
+  max_backoff_duration: "300s"
+  max_doublings: 3
+
+# Cloud Runサービスのエンドポイント
+http_target:
+  http_method: POST
+  uri: "${EGOV_LAW_FETCHER_URL}"
+  oidc_token:
+    service_account_email: "${SERVICE_ACCOUNT_EMAIL}"

@@ -1,0 +1,28 @@
+{
+  "defaultService": "https://www.googleapis.com/compute/v1/projects/conpass-agent/global/backendServices/conpass-file-server-backend-service-dev",
+  "kind": "compute#urlMap",
+  "name": "conpass-agent-cdn-lb-test",
+  "hostRules": [
+    {
+      "hosts": ["files.con-pass.jp"],
+      "pathMatcher": "files-to-api"
+    }
+  ],
+  "pathMatchers": [
+    {
+      "name": "files-to-api",
+      "defaultService": "https://www.googleapis.com/compute/v1/projects/conpass-agent/global/backendServices/conpass-file-server-backend-service-dev",
+      "pathRules": [
+        {
+          "paths": ["/files/*"],
+          "routeAction": {
+            "urlRewrite": {
+              "pathPrefixRewrite": "/api/v1/files"
+            }
+          },
+          "service": "https://www.googleapis.com/compute/v1/projects/conpass-agent/global/backendServices/conpass-file-server-backend-service-dev"
+        }
+      ]
+    }
+  ]
+}

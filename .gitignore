@@ -1,0 +1,64 @@
+# Claude Code ローカル設定
+.claude/
+
+# Google Drive 同期状態
+.gdrive_state.json
+gdrive_sync.py
+README_gdrive.md
+
+# 機密情報
+.env
+.env.*
+*.json.bak
+client_secret*.json
+token.json
+gha-creds-*.json
+**/gha-creds-*.json
+service-account*.json
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.uv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Node.js
+node_modules/
+.npm/
+dist/
+.vite/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# モデルファイル（大容量）
+*.pt
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+
+# データ
+*.sqlite3
+*.db

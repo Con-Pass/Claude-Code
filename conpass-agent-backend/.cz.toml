@@ -1,0 +1,16 @@
+[tool.commitizen]
+name = "cz_customize"
+
+[tool.commitizen.customize]
+
+message_template = "{{change_type}}: {{message}}"
+example = "Feat: CAA-123/Implement new feature or Feat: Implement new feature"
+
+# Only CAA prefixes are allowed, and are optional.
+schema = "<type>: [CAA-<number>/]<description>"
+
+# Enforce types (Feat, Fix, Refactor, Merge, Enhance, Docs), optional CAA-<n>/ or CAA-<n> - , description starting uppercase.
+schema_pattern = "^(Feat|Fix|Refactor|Merge|Enhance|Docs): (?:(?:CAA)-\\d+(?:\\/| - ))?[A-Z].+|^Merge (remote-tracking )?branch '.+' into .+$"
+
+# Parse existing commits allowing optional CAA prefix.
+commit_parser = "^(?:(?P<change_type>Feat|Fix|Refactor|Merge|Enhance|Docs): (?P<message>(?:(?:CAA)-\\d+(?:\\/| - ))?[A-Z].+))|(?P<merge>Merge (remote-tracking )?branch '.+' into .+)$"

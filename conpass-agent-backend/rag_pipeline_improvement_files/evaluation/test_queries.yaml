@@ -1,0 +1,186 @@
+# ConPass RAG パイプライン評価クエリセット
+# 各クエリに対する期待結果と関連度スコアを定義
+#
+# relevance スコア:
+#   2 = 高関連（クエリに直接回答する契約）
+#   1 = 中関連（部分的に関連する契約）
+#   0 = 非関連
+#
+# type:
+#   semantic_search = セマンティック検索で評価
+#   metadata_search = メタデータ検索で評価
+
+queries:
+  # --- セマンティック検索クエリ ---
+
+  - id: "ss_001"
+    query: "秘密保持条項のある契約はどれですか？"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []  # 実データに合わせて更新
+    relevance: {}
+    notes: "NDA関連条項を含む契約を検索"
+
+  - id: "ss_002"
+    query: "損害賠償に関する条項を含む契約を探してください"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "損害賠償・賠償責任条項の検索"
+
+  - id: "ss_003"
+    query: "契約解除の条件が定められている契約はありますか？"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "解約・契約解除条項の検索"
+
+  - id: "ss_004"
+    query: "競業避止義務が含まれる契約"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "競業避止・競合制限条項の検索"
+
+  - id: "ss_005"
+    query: "知的財産権の帰属について定めている契約"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "知財・著作権帰属条項の検索"
+
+  - id: "ss_006"
+    query: "支払い条件が30日以内の契約"
+    type: semantic_search
+    category: "条件検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "支払い期限・条件の検索"
+
+  - id: "ss_007"
+    query: "不可抗力条項を含む契約を教えてください"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "フォースマジュール条項の検索"
+
+  - id: "ss_008"
+    query: "準拠法が日本法の契約"
+    type: semantic_search
+    category: "条件検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "準拠法条項の検索"
+
+  - id: "ss_009"
+    query: "個人情報の取り扱いに関する条項"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "個人情報保護・プライバシー条項の検索"
+
+  - id: "ss_010"
+    query: "SLA条項のある契約"
+    type: semantic_search
+    category: "条項検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "サービスレベル合意条項の検索"
+
+  # --- 同義語・略語テストクエリ ---
+
+  - id: "ss_011"
+    query: "NDAの条項がある契約は？"
+    type: semantic_search
+    category: "同義語"
+    expected_contracts: []
+    relevance: {}
+    notes: "NDA = 秘密保持契約 = 守秘義務"
+
+  - id: "ss_012"
+    query: "守秘義務契約を見つけてください"
+    type: semantic_search
+    category: "同義語"
+    expected_contracts: []
+    relevance: {}
+    notes: "ss_001/ss_011と同じ結果を期待"
+
+  - id: "ss_013"
+    query: "賠償責任の上限が設定されている契約"
+    type: semantic_search
+    category: "同義語"
+    expected_contracts: []
+    relevance: {}
+    notes: "損害賠償 = 賠償責任 = 損害の補償"
+
+  # --- メタデータ検索クエリ ---
+
+  - id: "ms_001"
+    query: "2024年に締結された契約を一覧表示してください"
+    type: metadata_search
+    category: "日付検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "契約日でフィルタリング"
+
+  - id: "ms_002"
+    query: "来月末で終了する契約はありますか？"
+    type: metadata_search
+    category: "日付検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "契約終了日でフィルタリング"
+
+  - id: "ms_003"
+    query: "自動更新ありの契約を探してください"
+    type: metadata_search
+    category: "条件検索"
+    expected_contracts: []
+    relevance: {}
+    notes: "自動更新フラグでフィルタリング"
+
+  # --- 複合クエリ（セマンティック + メタデータ要素） ---
+
+  - id: "cx_001"
+    query: "秘密保持条項があり、2024年以降に締結された契約"
+    type: semantic_search
+    category: "複合"
+    expected_contracts: []
+    relevance: {}
+    notes: "セマンティック + 日付条件の複合クエリ"
+
+  - id: "cx_002"
+    query: "損害賠償の上限額が1000万円以上の契約"
+    type: semantic_search
+    category: "複合"
+    expected_contracts: []
+    relevance: {}
+    notes: "セマンティック + 金額条件の複合クエリ"
+
+# メタ情報
+metadata:
+  version: "1.0.0"
+  created_at: "2026-02-16"
+  description: |
+    ConPass RAGパイプラインの検索品質を評価するためのテストクエリセット。
+    expected_contractsとrelevanceフィールドは、実データのcontract_idを用いて
+    手動でアノテーションする必要があります。
+
+    使用方法:
+    1. 本番Qdrantからテスト用ディレクトリのcontract_idを確認
+    2. 各クエリに対して人手で関連契約を判定
+    3. expected_contractsとrelevanceを記入
+    4. evaluation_runner.pyを実行して評価
+
+  annotation_guide: |
+    アノテーション手順:
+    - 各クエリについて、関連する契約IDをexpected_contractsに記入
+    - relevanceに契約IDと関連度スコア（2=高, 1=中）のマッピングを記入
+    - 自信がない場合は1（中関連）としてマーク
+    - 同義語カテゴリのクエリは、対応するクエリと同じ結果を期待
