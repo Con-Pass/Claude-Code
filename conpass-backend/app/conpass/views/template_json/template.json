@@ -1,0 +1,257 @@
+{
+    "data": [
+        {
+            "key": "title",
+            "label": "契約書名",
+            "type": "text",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": 1,
+            "required": true,
+            "metaOnly": true,
+            "amount": false
+        },
+        {
+            "key": "companya",
+            "label": "会社名（甲）",
+            "type": "list",
+            "pattern": "client",
+            "errorMsg": "※必須項目",
+            "metaId": 2,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "companyb",
+            "label": "会社名（乙）",
+            "type": "list",
+            "pattern": "client",
+            "errorMsg": "※必須項目",
+            "metaId": 3,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "companyc",
+            "label": "会社名（丙）",
+            "type": "list",
+            "pattern": "client",
+            "errorMsg": "※必須項目",
+            "metaId": 4,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "companyd",
+            "label": "会社名（丁）",
+            "type": "list",
+            "pattern": "client",
+            "errorMsg": "※必須項目",
+            "metaId": 5,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "mycompanya",
+            "label": "自社名（甲）",
+            "type": "list",
+            "pattern": "account",
+            "errorMsg": "※必須項目",
+            "metaId": 2,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "mycompanyb",
+            "label": "自社名（乙）",
+            "type": "list",
+            "pattern": "account",
+            "errorMsg": "※必須項目",
+            "metaId": 3,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "mycompanyc",
+            "label": "自社名（丙）",
+            "type": "list",
+            "pattern": "account",
+            "errorMsg": "※必須項目",
+            "metaId": 4,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "mycompanyd",
+            "label": "自社名（丁）",
+            "type": "list",
+            "pattern": "account",
+            "errorMsg": "※必須項目",
+            "metaId": 5,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "contractdate",
+            "label": "契約日",
+            "type": "date",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": 6,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "contractstartdate",
+            "label": "契約開始日",
+            "type": "date",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": 7,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "contractenddate",
+            "label": "契約終了日",
+            "type": "date",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": 8,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "docid",
+            "label": "管理番号",
+            "type": "text",
+            "pattern": "^[ -~｡-ﾟ]+$",
+            "errorMsg": "※必須項目・半角文字で入力をしてください",
+            "metaId": 11,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "amount",
+            "label": "金額",
+            "type": "number",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": 19,
+            "required": true,
+            "metaOnly": false,
+            "amount": true
+        },
+        {
+            "key": "representative",
+            "label": "代表者名",
+            "type": "text",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": null,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "department",
+            "label": "部署名",
+            "type": "text",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": null,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "position",
+            "label": "役職名",
+            "type": "text",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": null,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "phonenumber",
+            "label": "電話番号",
+            "type": "number",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": null,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "address1",
+            "label": "都道府県",
+            "type": "text",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": null,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "address2",
+            "label": "市区町村",
+            "type": "text",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": null,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "address3",
+            "label": "番地・建物名",
+            "type": "text",
+            "pattern": null,
+            "errorMsg": "※必須項目",
+            "metaId": null,
+            "required": true,
+            "metaOnly": false,
+            "amount": false
+        },
+        {
+            "key": "person",
+            "label": "担当者名",
+            "type": "list",
+            "pattern": "user",
+            "errorMsg": "",
+            "metaId": 17,
+            "required": false,
+            "metaOnly": true,
+            "amount": false
+        },
+        {
+            "key": "contract_renew_notify",
+            "label": "契約更新通知",
+            "type": "list",
+            "pattern": "renew_notify",
+            "errorMsg": "",
+            "metaId": 18,
+            "required": false,
+            "metaOnly": true,
+            "amount": false
+        }
+    ]
+}

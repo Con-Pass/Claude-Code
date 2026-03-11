@@ -1,0 +1,121 @@
+version: '3'
+
+services:
+  app: &app
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+      args:
+        UID: "${UID:-1000}"
+    environment:
+      NO_PROXY: '127.0.0.1,localhost,web,db,worker,redis,maildev'
+      no_proxy: '127.0.0.1,localhost,web,db,worker,redis,maildev'
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "1717:1717"
+    env_file: .env
+    command: [ "uwsgi", "uwsgi.ini", "--py-autoreload", "1", "--static-map",  "/static=/app/app/staticfiles/", "--http-timeout", "120" ]
+  worker:
+    <<: *app
+    environment:
+      IS_INTERNAL_APP_SERVER: "true"
+    ports:
+      - "8806:8000"
+    command:
+      - "watchmedo"
+      - "auto-restart"
+      - "--directory=./"
+      - "--pattern=*.py"
+      - "--recursive"
+      - "--"
+      - "/usr/bin/supervisord"
+      - "-c"
+      - "/etc/supervisor/conf.d/celery-worker.conf"
+  worker2:
+    <<: *app
+    environment:
+      NO_PROXY: '127.0.0.1,localhost,web,db,worker,redis,maildev'
+      no_proxy: '127.0.0.1,localhost,web,db,worker,redis,maildev'
+      IS_INTERNAL_APP_SERVER: "true"
+    ports:
+      - "1718:1718"
+    command: [ "uwsgi", "uwsgi_worker.ini", "--py-autoreload", "1", "--static-map",  "/static=/app/app/staticfiles/", "--http-timeout", "120" ]
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+      args:
+        UID: "${UID:-1000}"
+        APP_HOST: app
+        APP_PORT: 8000
+        VUE_CLI_HOST: host.docker.internal
+        VUE_CLI_PORT: 8801
+    depends_on:
+      - app
+    ports:
+      - "8800:80"
+  db:
+    build:
+      context: .
+      dockerfile: ./docker/db/Dockerfile
+    ports:
+      - '${EXPOSE_DB_PORT:-8802}:3306'
+    platform: linux/x86_64
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: conpass
+      MYSQL_USER: conpass
+      MYSQL_PASSWORD: secret
+    volumes:
+      - 'db:/var/lib/mysql'
+      - './docker/db/initdb.d:/docker-entrypoint-initdb.d'
+    command: >
+      bash -c '
+      touch /var/log/mysql/general.log &&
+      chown mysql:mysql /var/log/mysql/general.log &&
+      tail -f /var/log/mysql/general.log &
+      /entrypoint.sh mysqld
+      --innodb-use-native-aio=0
+      '
+    healthcheck:
+      test: [ 'CMD', 'mysqladmin', 'ping' ]
+  redis:
+    image: redis
+    ports:
+      - "8803:6379"
+    volumes:
+      - redis:/data
+  maildev:
+    image: ykanazawa/sendgrid-maildev
+    hostname: sendgrid-maildev
+    environment:
+      - SENDGRID_DEV_API_SERVER=:3030
+    container_name: sendgrid-maildev
+    ports:
+      - 8804:1080
+      - 8805:3030
+  keycloak:
+    image: quay.io/keycloak/keycloak:18.0.0
+    container_name: keycloak
+    tty: true
+    stdin_open: true
+    ports:
+      - "18080:8080" # 8080は被りやすいので別のポートに設定
+    volumes:
+      - ./data/keycloak:/opt/keycloak/data # DB情報等が格納されます
+    environment:
+      KEYCLOAK_ADMIN: admin # 管理ユーザーIDを設定
+      KEYCLOAK_ADMIN_PASSWORD: passwd # 管理ユーザーのパスワードを設定
+    command:
+      - start-dev
+
+volumes:
+  db:
+    driver: local
+  redis:
+    driver: local

@@ -1,0 +1,8 @@
+p {
+  margin: 0.1rem 0;
+}
+
+p.head-seq {
+  font-size: .75rem;
+  text-align: right;
+}

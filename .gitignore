@@ -16,6 +16,9 @@ gha-creds-*.json
 **/gha-creds-*.json
 service-account*.json
 credentials.json
+*-key.json
+**/*-key.json
+**/*-45a906b42230.json
 
 # Python
 __pycache__/

@@ -1,0 +1,13 @@
+# Google Cloud Platform SDKs
+# --------------------------
+# functions-framework for Cloud Functions
+functions-framework==3.4.0
+# Google Cloud Storage client library
+google-cloud-storage==2.10.0
+# Gen AI SDK (this includes the 'vertexai' module)
+google-genai==1.21.1
+
+# Other Libraries
+# ---------------
+# HTTP requests library
+requests>=2.31.0

@@ -1,0 +1,161 @@
+[
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "一般",
+      "description": "汎用的な作業です",
+      "type": 0,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "承認",
+      "description": "社内等での承認を取ります",
+      "type": 1,
+      "is_need_contract": true,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "文書作成",
+      "description": "契約書などを作成します",
+      "type": 2,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "合意",
+      "description": "契約を交わす相手と合意します",
+      "type": 3,
+      "is_need_contract": true,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "電子署名（メール）",
+      "description": "外部サービスと連携し、電子署名を行います",
+      "type": 4,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "システム外作業",
+      "description": "ConPassシステム外での作業を行います",
+      "type": 5,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "ダウンロード",
+      "description": "ファイルをダウンロードします",
+      "type": 6,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "アップロード",
+      "description": "ファイルをアップロードします",
+      "type": 7,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "Eメール",
+      "description": "Eメールを送信します",
+      "type": 8,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "郵送",
+      "description": "郵便物を送ります",
+      "type": 9,
+      "is_need_contract": false,
+      "status": 1,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "配送",
+      "description": "荷物を配送します",
+      "type": 10,
+      "is_need_contract": false,
+      "status": 0,
+      "created_at": "2022-02-17 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-02-17 12:00:00",
+      "updated_by": 1
+    }
+  }
+]

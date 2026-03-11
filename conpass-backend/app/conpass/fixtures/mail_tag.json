@@ -1,0 +1,93 @@
+[
+  {
+    "model": "conpass.mailtag",
+    "pk": null,
+    "fields": {
+      "tag": "{header}",
+      "text": "メールヘッダ。「メールヘッダ設定」で設定してください",
+      "status": 1,
+      "created_at": "2022-03-02 00:00:00",
+      "created_by": 1,
+      "updated_at": "2022-03-02 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.mailtag",
+    "pk": null,
+    "fields": {
+      "tag": "{footer}",
+      "text": "メールフッタ「メールフッタ設定」で設定してください",
+      "status": 1,
+      "created_at": "2022-03-02 00:00:00",
+      "created_by": 1,
+      "updated_at": "2022-03-02 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.mailtag",
+    "pk": null,
+    "fields": {
+      "tag": "{contract:client}",
+      "text": "契約書の連絡先",
+      "status": 1,
+      "created_at": "2022-03-02 00:00:00",
+      "created_by": 1,
+      "updated_at": "2022-03-02 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.mailtag",
+    "pk": null,
+    "fields": {
+      "tag": "{contract:concludeDate}",
+      "text": "契約書の締結日",
+      "status": 1,
+      "created_at": "2022-03-02 00:00:00",
+      "created_by": 1,
+      "updated_at": "2022-03-02 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.mailtag",
+    "pk": null,
+    "fields": {
+      "tag": "{contract:limitDate}",
+      "text": "契約書の有効期限日",
+      "status": 1,
+      "created_at": "2022-03-02 00:00:00",
+      "created_by": 1,
+      "updated_at": "2022-03-02 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.mailtag",
+    "pk": null,
+    "fields": {
+      "tag": "{contract:detailUrl}",
+      "text": "契約書の詳細表示のURL",
+      "status": 1,
+      "created_at": "2022-03-02 00:00:00",
+      "created_by": 1,
+      "updated_at": "2022-03-02 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.mailtag",
+    "pk": null,
+    "fields": {
+      "tag": "{contract:renewUrl}",
+      "text": "契約書更新ワークフロー作成のURL",
+      "status": 1,
+      "created_at": "2022-03-02 00:00:00",
+      "created_by": 1,
+      "updated_at": "2022-03-02 00:00:00",
+      "updated_by": 1
+    }
+  }
+]

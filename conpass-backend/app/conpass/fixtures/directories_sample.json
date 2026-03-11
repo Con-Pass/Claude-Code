@@ -1,0 +1,105 @@
+[
+  {
+    "model": "conpass.directory",
+    "pk": null,
+    "fields": {
+      "name": "ディレクトリ1",
+      "level": 0,
+      "type": 1,
+      "status": 1,
+      "account_id": 1,
+      "memo": "メモ1",
+      "parent_id": null,
+      "created_at": "2022-01-14 00:00:00",
+      "created_by": 1,
+      "updated_at": "2011-01-14 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.directory",
+    "pk": null,
+    "fields": {
+      "name": "ディレクトリ2",
+      "level": 0,
+      "type": 2,
+      "status": 1,
+      "account_id": 1,
+      "memo": "メモ2",
+      "parent_id": null,
+      "created_at": "2022-01-14 00:00:00",
+      "created_by": 1,
+      "updated_at": "2011-01-14 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.directory",
+    "pk": null,
+    "fields": {
+      "name": "ディレクトリ3",
+      "level": 0,
+      "type": 3,
+      "status": 1,
+      "account_id": 1,
+      "memo": "メモ3",
+      "parent_id": null,
+      "created_at": "2022-01-14 00:00:00",
+      "created_by": 1,
+      "updated_at": "2011-01-14 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.directory",
+    "pk": null,
+    "fields": {
+      "name": "ディレクトリ1-1",
+      "level": 1,
+      "type": 1,
+      "status": 1,
+      "account_id": 1,
+      "memo": "メモ1-1",
+      "parent_id": 1,
+      "created_at": "2022-01-14 00:00:00",
+      "created_by": 1,
+      "updated_at": "2011-01-14 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.directory",
+    "pk": null,
+    "fields": {
+      "name": "ディレクトリ2-1",
+      "level": 1,
+      "type": 2,
+      "status": 1,
+      "account_id": 1,
+      "memo": "メモ2-1",
+      "parent_id": 2,
+      "created_at": "2022-01-14 00:00:00",
+      "created_by": 1,
+      "updated_at": "2011-01-14 00:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.directory",
+    "pk": null,
+    "fields": {
+      "name": "ディレクトリ3-1",
+      "level": 1,
+      "type": 3,
+      "status": 1,
+      "account_id": 1,
+      "memo": "メモ3-1",
+      "parent_id": 3,
+      "created_at": "2022-01-14 00:00:00",
+      "created_by": 1,
+      "updated_at": "2011-01-14 00:00:00",
+      "updated_by": 1
+    }
+  }
+]
+

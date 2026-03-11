@@ -1,0 +1,209 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  vuejs-eslint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v4
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: install node-gyp
+        run: yarn global add node-gyp
+
+      - name: Yarn install
+        run: yarn install --frozen-lockfile
+
+      - name: eslint
+        env:
+          NODE_ENV: production
+        run:  npx eslint resources/ specs/ --ext .js,.ts,.vue
+  vuejs-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v4
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: install node-gyp
+        run: yarn global add node-gyp
+
+      - name: Yarn install
+        run: yarn install --frozen-lockfile
+
+      - name: bulild
+        env:
+          NODE_ENV: production
+        run: yarn build
+
+  vuejs-jest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v4
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: install node-gyp
+        run: yarn global add node-gyp
+
+      - name: Yarn install
+        run: yarn install --frozen-lockfile
+
+      - name: jest
+        run: yarn test:unit
+
+  django-pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        # The actions/cache step below uses this id to get the exact python version
+        id: setup-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-python-${{ steps.setup-python.outputs.python-version }}-pipenv-${{ hashFiles('Pipfile.lock') }}
+
+      - name: Start MySQL
+        run: sudo systemctl start mysql
+
+      - name: Initialize DB
+        run: |
+          mysql -u root -proot -e "create user conpass@'127.0.0.1' identified by 'secret';"
+          mysql -u root -proot -e "grant all privileges on *.* to conpass@'127.0.0.1';"
+          mysql -u root -proot -e "create database conpass default charset utf8mb4;"
+          mysql -u root -proot -e "create database test_conpass default charset utf8mb4;"
+
+      - name: Install deps
+        run: |
+          sudo apt update -y
+          sudo apt install libzbar0 libxml2-dev libxmlsec1-dev libxmlsec1-openssl -y
+
+      - name: install pipenv
+        run: pip install pipenv
+
+      - name: Recreate pipenv env and force‑build xmlsec
+        run: |
+          pipenv --rm || true
+          pipenv install --dev --clear
+
+          pipenv run pip install --no-binary xmlsec xmlsec
+
+      - name: Run pytest
+        env:
+          DB_PORT: 3306
+        run: |
+          pipenv run pytest \
+            --showlocals \
+            --junitxml=junit.xml \
+            --cov-report=html:htmlcov \
+            --cov=app
+
+  django-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        id: setup-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-python-${{ steps.setup-python.outputs.python-version }}-pipenv-${{ hashFiles('Pipfile.lock') }}
+
+      - name: Install deps
+        run: |
+          sudo apt update -y
+          sudo apt install libzbar0 libxml2-dev libxmlsec1-dev libxmlsec1-openssl -y
+
+      - name: install pipenv
+        run: pip install pipenv
+
+      - name: Pipenv install
+        run: pipenv install --dev
+
+      - name: Run lint
+        run: pipenv run lint --tee
+
+  check-typo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: typo conpass
+        env:
+          WORD: compass
+        run: |
+          if grep -iE "\\b$WORD\\b" -r ./ --exclude-dir=.github; then false; else true; fi
+
+  docker-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if:
+      contains('
+      refs/heads/develop
+      refs/heads/main
+      ', github.ref)
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: build docker image
+        env:
+          DOCKER_BUILDKIT: 1
+          APP_IMAGE_TAG: conpass/app # TODO: GCPのレジストリに変更予定
+        run: |
+          docker build --cache-from=$APP_IMAGE_TAG \
+            --progress plain \
+            --tag $APP_IMAGE_TAG \
+            --file docker/app/Dockerfile .

@@ -1,0 +1,483 @@
+[
+  {
+    "model": "conpass.leasekey",
+    "pk": 1,
+    "fields": {
+      "name": "オフィス",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 2,
+    "fields": {
+      "name": "テナント",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 3,
+    "fields": {
+      "name": "社宅",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 4,
+    "fields": {
+      "name": "倉庫",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 5,
+    "fields": {
+      "name": "工場設備",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 6,
+    "fields": {
+      "name": "電気設備",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 7,
+    "fields": {
+      "name": "土地",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 8,
+    "fields": {
+      "name": "桟橋",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 9,
+    "fields": {
+      "name": "駐車場",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 10,
+    "fields": {
+      "name": "社用車",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 11,
+    "fields": {
+      "name": "トラック",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 12,
+    "fields": {
+      "name": "コンテナ",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 13,
+    "fields": {
+      "name": "フォークリフト",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 14,
+    "fields": {
+      "name": "鉄道車両",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 15,
+    "fields": {
+      "name": "船舶",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 16,
+    "fields": {
+      "name": "飛行機",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 17,
+    "fields": {
+      "name": "金型",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 18,
+    "fields": {
+      "name": "加工機械",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 19,
+    "fields": {
+      "name": "太陽光パネル",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 20,
+    "fields": {
+      "name": "発電設備",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 21,
+    "fields": {
+      "name": "電力",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 22,
+    "fields": {
+      "name": "貯蔵タンク",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 23,
+    "fields": {
+      "name": "パイプライン",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 24,
+    "fields": {
+      "name": "サーバー",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 25,
+    "fields": {
+      "name": "ケーブル",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 26,
+    "fields": {
+      "name": "変電所",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 27,
+    "fields": {
+      "name": "ドライブレコーダー",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 28,
+    "fields": {
+      "name": "ネットワーク・サービス",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 29,
+    "fields": {
+      "name": "pc",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 30,
+    "fields": {
+      "name": "複合機",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 31,
+    "fields": {
+      "name": "監視カメラ",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 32,
+    "fields": {
+      "name": "セキュリティ関連",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 33,
+    "fields": {
+      "name": "電話回線",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 34,
+    "fields": {
+      "name": "給茶機",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 35,
+    "fields": {
+      "name": "ウォーターサーバー",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 36,
+    "fields": {
+      "name": "led",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  },
+  {
+    "model": "conpass.leasekey",
+    "pk": 37,
+    "fields": {
+      "name": "pos",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2025-06-23 10:00:00",
+      "updated_at": "2025-06-23 10:00:00"
+    }
+  }
+]

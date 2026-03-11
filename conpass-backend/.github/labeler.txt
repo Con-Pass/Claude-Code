@@ -1,0 +1,11 @@
+"need:migrate":
+- app/**/migrations/*
+
+"update:pipenv":
+- Pipfile.lock
+
+"update:yarn":
+- yarn.lock
+
+"needs:docker-compose build":
+- "**/Dockerfile"

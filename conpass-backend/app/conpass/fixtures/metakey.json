@@ -1,0 +1,306 @@
+[
+  {
+    "model": "conpass.metakey",
+    "pk": 1,
+    "fields": {
+      "name": "契約書名",
+      "label": "title",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 2,
+    "fields": {
+      "name": "会社名（甲）",
+      "label": "companya",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 3,
+    "fields": {
+      "name": "会社名（乙）",
+      "label": "companyb",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 4,
+    "fields": {
+      "name": "会社名（丙）",
+      "label": "companyc",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 5,
+    "fields": {
+      "name": "会社名（丁）",
+      "label": "companyd",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 6,
+    "fields": {
+      "name": "契約日",
+      "label": "contractdate",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 7,
+    "fields": {
+      "name": "契約開始日",
+      "label": "contractstartdate",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 8,
+    "fields": {
+      "name": "契約終了日",
+      "label": "contractenddate",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 9,
+    "fields": {
+      "name": "自動更新の有無",
+      "label": "autoupdate",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 10,
+    "fields": {
+      "name": "解約ノーティス日",
+      "label": "cancelnotice",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 11,
+    "fields": {
+      "name": "管理番号",
+      "label": "docid",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 12,
+    "fields": {
+      "name": "関連契約書",
+      "label": "related_contract",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 13,
+    "fields": {
+      "name": "関連契約日",
+      "label": "related_contract_date",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 14,
+    "fields": {
+      "name": "裁判所",
+      "label": "cort",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 15,
+    "fields": {
+      "name": "再委託禁止",
+      "label": "outsource",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 0,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 16,
+    "fields": {
+      "name": "契約種別",
+      "label": "conpass_contract_type",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 17,
+    "fields": {
+      "name": "担当者名",
+      "label": "conpass_person",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 18,
+    "fields": {
+      "name": "契約更新通知",
+      "label": "conpass_contract_renew_notify",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.metakey",
+    "pk": 19,
+    "fields": {
+      "name": "金額",
+      "label": "conpass_amount",
+      "account": null,
+      "type": 1,
+      "is_visible": true,
+      "status": 1,
+      "created_at": "2011-11-24 10:00:00",
+      "created_by": 1,
+      "updated_at": "2011-11-24 10:00:00",
+      "updated_by": 1
+    }
+  }
+]

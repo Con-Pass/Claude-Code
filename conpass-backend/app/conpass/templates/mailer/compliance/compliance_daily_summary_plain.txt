@@ -1,0 +1,33 @@
+{{corporate_name}}
+{{user_name}}　様
+
+
+{{summary_date}} のコンプライアンス日次サマリーをお知らせします。
+
+────────────────────────────────
+
+◇未対応アラート件数
+　・警告（WARN）：{{total_warn_count}} 件
+　・失敗（FAIL）：{{total_fail_count}} 件
+
+────────────────────────────────
+{% if critical_items %}
+◇要対応（緊急）アラート一覧：
+{% for item in critical_items %}
+  [{{forloop.counter}}] {{item.rule_name}}
+　　　契約書：{{item.contract_name}}（ID: {{item.contract_id}}）
+　　　結果：{{item.result}}
+　　　URL：https://www.con-pass.jp/contract/{{item.contract_id}}
+{% endfor %}
+────────────────────────────────
+{% endif %}
+詳細はConPassのコンプライアンスダッシュボードをご確認ください。
+https://www.con-pass.jp/dashboard/compliance
+
+本メールはConPassのコンプライアンス監視機能により
+自動送信されています。
+
+---------------------------------
+ConPass
+https://www.con-pass.jp/login
+---------------------------------

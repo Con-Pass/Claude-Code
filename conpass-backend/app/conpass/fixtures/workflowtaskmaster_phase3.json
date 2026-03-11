@@ -1,0 +1,76 @@
+[
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "[BPO契約管理者]承認",
+      "description": "BPO契約管理者が承認をします",
+      "type": 11,
+      "is_need_contract": true,
+      "status": 1,
+      "created_at": "2023-07-01 12:00:00",
+      "created_by": 1,
+      "updated_at": "2023-07-01 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "[BPO]印刷製本・押印・郵送",
+      "description": "[BPO]印刷製本・押印・郵送",
+      "type": 12,
+      "is_need_contract": true,
+      "status": 1,
+      "created_at": "2023-07-01 12:00:00",
+      "created_by": 1,
+      "updated_at": "2023-07-01 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "[BPO]受取",
+      "description": "[BPO]受取",
+      "type": 13,
+      "is_need_contract": true,
+      "status": 1,
+      "created_at": "2023-07-01 12:00:00",
+      "created_by": 1,
+      "updated_at": "2023-07-01 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "[BPO]スキャニング・アップロード",
+      "description": "[BPO]スキャニング・アップロード",
+      "type": 14,
+      "is_need_contract": true,
+      "status": 1,
+      "created_at": "2023-07-01 12:00:00",
+      "created_by": 1,
+      "updated_at": "2023-07-01 12:00:00",
+      "updated_by": 1
+    }
+  },  {
+    "model": "conpass.workflowtaskmaster",
+    "pk": null,
+    "fields": {
+      "name": "[BPO]原本の保管または返却",
+      "description": "[BPO]原本の保管または返却",
+      "type": 15,
+      "is_need_contract": true,
+      "status": 1,
+      "created_at": "2023-07-01 12:00:00",
+      "created_by": 1,
+      "updated_at": "2023-07-01 12:00:00",
+      "updated_by": 1
+    }
+  }
+]

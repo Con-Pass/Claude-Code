@@ -1,0 +1,14 @@
+[
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 13,
+    "fields": {
+      "name": "IPアドレス制限の管理",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  }
+]

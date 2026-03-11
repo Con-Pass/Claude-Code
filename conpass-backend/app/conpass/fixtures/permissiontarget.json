@@ -1,0 +1,146 @@
+[
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 1,
+    "fields": {
+      "name": "締結済み契約書アップロード",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 2,
+    "fields": {
+      "name": "契約書テンプレートアップロード",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 3,
+    "fields": {
+      "name": "契約書ダウンロード",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 4,
+    "fields": {
+      "name": "締結済み契約書詳細表示",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 5,
+    "fields": {
+      "name": "ユーザー管理",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 6,
+    "fields": {
+      "name": "BPO依頼",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 7,
+    "fields": {
+      "name": "契約書メタ情報の管理",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 8,
+    "fields": {
+      "name": "新規契約書作成",
+      "status": 0,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 9,
+    "fields": {
+      "name": "フォルダ管理",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 10,
+    "fields": {
+      "name": "契約書削除",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 11,
+    "fields": {
+      "name": "ワークフロー管理",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 12,
+    "fields": {
+      "name": "連絡先管理",
+      "status": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  }
+]

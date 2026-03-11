@@ -1,0 +1,32 @@
+[
+    {
+    "model": "conpass.account",
+    "pk": null,
+    "fields": {
+      "name": "リベルスカイConPass契約",
+      "plan": 1,
+      "status": 1,
+      "start_date": null,
+      "cancel_date": null,
+      "created_at": "2021-11-15 17:00:00",
+      "created_by_id": 1,
+      "updated_at": "2021-11-15 17:00:00",
+      "updated_by_id": 1
+    }
+  },
+    {
+    "model": "conpass.account",
+    "pk": null,
+    "fields": {
+      "name": "あああConPass契約",
+      "plan": 1,
+      "status": 1,
+      "start_date": null,
+      "cancel_date": null,
+      "created_at": "2021-11-15 17:00:00",
+      "created_by_id": 1,
+      "updated_at": "2021-11-15 17:00:00",
+      "updated_by_id": 1
+    }
+  }
+]

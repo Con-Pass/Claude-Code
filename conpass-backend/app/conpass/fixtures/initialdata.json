@@ -1,0 +1,95 @@
+[
+  {
+    "model": "conpass.account",
+    "pk": 1,
+    "fields": {
+      "name": "アルティネットConPass契約",
+      "plan": 1,
+      "status": 1,
+      "start_date": null,
+      "cancel_date": null,
+      "created_at": "2021-11-15 17:00:00",
+      "created_by_id": 1,
+      "updated_at": "2021-11-15 17:00:00",
+      "updated_by_id": 1
+    }
+  },
+  {
+    "model": "conpass.corporate",
+    "pk": 1,
+    "fields": {
+      "name": "株式会社アルティネット",
+      "address": "東京都文京区湯島",
+      "executive_name": "宮原",
+      "sales_name": "永井",
+      "service": "システム開発事業",
+      "url": "https://www.ultinet.co.jp/",
+      "tel": "03-5816-6800",
+      "status": 1,
+      "created_at": "2021-11-15 17:00:00",
+      "created_by_id": 1,
+      "updated_at": "2021-11-15 17:00:00",
+      "updated_by_id": 1
+    }
+  },
+  {
+    "model": "conpass.user",
+    "pk": null,
+    "fields": {
+      "login_name": "admin@example.com",
+      "password": "pbkdf2_sha256$260000$0KpUKHTwz985xI6xgMk6cX$n5yXxT1M7Pj0i6xpsUG6xsoxf+DtzyTF5UMyqbDQhMo=",
+      "username": "システム管理者",
+      "division": "システム部",
+      "position": "",
+      "email": "admin@example.com",
+      "tel": "",
+      "memo": "",
+      "status": 1,
+      "created_at": "2021-11-15 17:00:00",
+      "created_by_id": 1,
+      "updated_at": "2021-11-15 17:00:00",
+      "updated_by_id": 1,
+      "account_id": null,
+      "client_id": null,
+      "corporate_id": null,
+      "type": 1
+    }
+  },
+  {
+    "model": "conpass.user",
+    "pk": null,
+    "fields": {
+      "login_name": "ozawa@ultinet.co.jp",
+      "password": "pbkdf2_sha256$260000$0KpUKHTwz985xI6xgMk6cX$n5yXxT1M7Pj0i6xpsUG6xsoxf+DtzyTF5UMyqbDQhMo=",
+      "username": "ultinet尾澤",
+      "division": "開発部",
+      "position": "",
+      "email": "ozawa@ultinet.co.jp",
+      "tel": "03-5816-6800",
+      "memo": "メモ",
+      "status": 1,
+      "created_at": "2021-11-15 17:00:00",
+      "created_by_id": 1,
+      "updated_at": "2021-11-15 17:00:00",
+      "updated_by_id": 1,
+      "account_id": 1,
+      "client_id": null,
+      "corporate_id": 1,
+      "type": 1
+    }
+  },
+  {
+    "model": "conpass.client",
+    "pk": null,
+    "fields": {
+      "name": "取引先A",
+      "provider_account_id": 1,
+      "corporate_id": 1,
+      "status": 1,
+      "created_at": "2021-11-16 17:00:00",
+      "created_by_id": 1,
+      "updated_at": "2021-11-16 17:00:00",
+      "updated_by_id": 1
+    }
+  }
+]

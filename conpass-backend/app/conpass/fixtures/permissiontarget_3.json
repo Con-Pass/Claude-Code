@@ -1,0 +1,184 @@
+[
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 1,
+    "fields": {
+      "name": "締結済み契約書アップロード",
+      "status": 1,
+      "sort_id": 1,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 2,
+    "fields": {
+      "name": "契約書テンプレートアップロード",
+      "status": 1,
+      "sort_id": 2,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 3,
+    "fields": {
+      "name": "契約書ダウンロード",
+      "status": 1,
+      "sort_id": 3,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 4,
+    "fields": {
+      "name": "締結済み契約書詳細表示",
+      "status": 1,
+      "sort_id": 4,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 5,
+    "fields": {
+      "name": "ユーザー管理",
+      "status": 1,
+      "sort_id": 5,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 6,
+    "fields": {
+      "name": "BPO依頼",
+      "status": 1,
+      "sort_id": 6,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 7,
+    "fields": {
+      "name": "契約書メタ情報の管理",
+      "status": 1,
+      "sort_id": 7,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 8,
+    "fields": {
+      "name": "新規契約書作成",
+      "status": 0,
+      "sort_id": 8,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 9,
+    "fields": {
+      "name": "フォルダ管理",
+      "status": 1,
+      "sort_id": 10,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 10,
+    "fields": {
+      "name": "契約書削除",
+      "status": 1,
+      "sort_id": 11,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 11,
+    "fields": {
+      "name": "ワークフロー管理",
+      "status": 1,
+      "sort_id": 12,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 12,
+    "fields": {
+      "name": "連絡先管理",
+      "status": 1,
+      "sort_id": 13,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 13,
+    "fields": {
+      "name": "IPアドレス制限の管理",
+      "status": 1,
+      "sort_id": 14,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  },
+  {
+    "model": "conpass.permissiontarget",
+    "pk": 14,
+    "fields": {
+      "name": "メタ情報編集",
+      "status": 1,
+      "sort_id": 9,
+      "created_at": "2022-04-26 12:00:00",
+      "created_by": 1,
+      "updated_at": "2022-04-26 12:00:00",
+      "updated_by": 1
+    }
+  }
+]
