@@ -12,7 +12,7 @@ RUN groupadd -g ${GID} ${APP_USER} && \
 RUN \
     apt-get update && \
     buildDeps="make gcc g++ libc-dev python3-dev default-libmysqlclient-dev build-essential pkg-config fonts-ipaexfont-gothic wget supervisor poppler-utils libzbar0 pandoc" && \
-    apt-get install -y --no-install-recommends $buildDeps libxml2-dev libxmlsec1-dev libxmlsec1-openssl
+    apt-get install -y --no-install-recommends $buildDeps libxml2-dev libxslt1-dev libxmlsec1-dev libxmlsec1-openssl
 
 RUN apt-get install -y --no-install-recommends wkhtmltopdf
 
@@ -22,6 +22,9 @@ WORKDIR ${PROJECT_ROOT}
 
 COPY --chown=${UID}:${GID} Pipfile Pipfile.lock ${PROJECT_ROOT}/
 RUN pipenv install --system --deploy
+# lxml と xmlsec を同じ libxml2 でソースコンパイルし直す（バイナリwheelのバージョン不一致防止）
+RUN pip install --force-reinstall --no-binary lxml lxml
+RUN pip install --force-reinstall --no-binary xmlsec xmlsec
 RUN pip install --force-reinstall bayoo-docx==0.2.20
 # ローカル開発用追加パッケージ（Pipfile.lockとの差分を補完）
 RUN pip install pdfminer.six openai
